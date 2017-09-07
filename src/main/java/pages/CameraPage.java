@@ -29,6 +29,7 @@ public class CameraPage {
     }
 
     private final static String SORTING_BY = ".//*[contains(text(),'Сортировать по:')]/following-sibling::div/span";
+//    private final static String SORTING_BY_PRICE = ".//*[contains(text(),'Сортировать по:')]/following-sibling::div/span";
     private final static String SORTING_PRICE = "(.//*[contains(text(),'возрастанию цены')])[1]";
     private final static String SHOW_BY = ".//*[contains(text(),'Показывать:')]/following-sibling::div/span";
     private final static String SHOW_TILE = ".//*[contains(text(),'плиткой')]";
