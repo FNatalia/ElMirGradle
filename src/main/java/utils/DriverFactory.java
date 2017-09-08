@@ -16,11 +16,11 @@ public class DriverFactory {
             case "Chrome":
                 driver = new ChromeDriver();
                 break;
-            case "Ie":
-                driver = new InternetExplorerDriver();
+            case "FireFox":
+                driver = new FirefoxDriver(  );
                 break;
             default:
-                driver = new FirefoxDriver();
+                driver = new InternetExplorerDriver();
         }
     }
 

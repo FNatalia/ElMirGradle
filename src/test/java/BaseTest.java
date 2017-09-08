@@ -7,6 +7,7 @@ import pages.MainPage;
 import pages.PhotoAndVideoPage;
 import utils.Configuration;
 import utils.DriverFactory;
+import utils.JavaProperties;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,10 +18,11 @@ public class BaseTest extends Configuration {
     MainPage mainPage;
     PhotoAndVideoPage photoAndVideoPage;
     CameraPage cameraPage;
+    JavaProperties properties = JavaProperties.newInstance() ;
 
     @BeforeMethod
     public void setUp() throws Exception {
-        DriverFactory.createDriver( browserType );
+        DriverFactory.createDriver( properties.getProperty( "browser" ) );
         DriverFactory.getDriver().manage().window().maximize();
         DriverFactory.getDriver().manage().timeouts().implicitlyWait( 10, TimeUnit.SECONDS );
         DriverFactory.getDriver().get( url );
